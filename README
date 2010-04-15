@@ -1,16 +1,11 @@
 NAME
-    Data::Money::Converter::WebserviceX - The great new
-    Data::Money::Converter::WebserviceX!
+    Data::Money::Converter::WebserviceX - WebserviceX currency conversion
+    implementation
 
 SYNOPSIS
-    Quick summary of what the module does.
-
-    Perhaps a little code snippet.
-
-        use Data::Money::Converter::WebserviceX;
-
-        my $foo = Data::Money::Converter::WebserviceX->new();
-        ...
+        my $curr = Data::Money->new(value => 10, code => 'USD');
+        my $conv = Data::Money::Converter::WebserviceX->new;
+        $conv->convert($curr, 'GBP'); # Converted!
 
 AUTHOR
     Cory G Watson, "<gphat at cpan.org>"

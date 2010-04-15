@@ -1,5 +1,8 @@
 Revision history for Data-Money-Converter-WebserviceX
 
+0.02    April 14, 2010
+    * Fix POD
+
 0.01    Date/time
         First version, released on an unsuspecting world.
 

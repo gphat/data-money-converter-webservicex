@@ -7,10 +7,9 @@ use Data::Money;
 use Data::Money::Types qw(CurrencyCode);
 use Finance::Currency::Convert::WebserviceX;
 
-
 with 'Data::Money::Converter';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has '_converter' => (
     is => 'ro',
@@ -39,18 +38,14 @@ __END__
 
 =head1 NAME
 
-Data::Money::Converter::WebserviceX - The great new Data::Money::Converter::WebserviceX!
+Data::Money::Converter::WebserviceX - WebserviceX currency conversion implementation
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+    my $curr = Data::Money->new(value => 10, code => 'USD');
+    my $conv = Data::Money::Converter::WebserviceX->new;
+    $conv->convert($curr, 'GBP'); # Converted!
 
-Perhaps a little code snippet.
-
-    use Data::Money::Converter::WebserviceX;
-
-    my $foo = Data::Money::Converter::WebserviceX->new();
-    ...
 
 =head1 AUTHOR
 
